@@ -1,0 +1,14 @@
+<!-- app/views/tasks/new.html.erb -->
+<%= form_with(model: @task, url: tasks_path, local: true) do |form| %>
+  <%= form.label :title %>
+  <%= form.text_field :title %>
+
+  <%= form.label :details %>
+  <%= form.text_area :details %>
+
+  <%= form.label :completed %>
+  <%= form.check_box :completed %>
+
+  <%= form.submit 'Create Task' %>
+<% end %>
+
